@@ -2,7 +2,7 @@
 
 /*
   Author: Martin Eden
-  Last mod.: 2025-09-04
+  Last mod.: 2025-09-11
 */
 
 #include <me_DebugPrints.h>
@@ -15,6 +15,9 @@
 
 using namespace me_DebugPrints;
 
+/*
+  Print unit
+*/
 void me_DebugPrints::Print(
   TAsciiz Annotation,
   TUnit Unit
@@ -24,6 +27,9 @@ void me_DebugPrints::Print(
   Console.Print(Unit);
 }
 
+/*
+  Print address
+*/
 void me_DebugPrints::Print(
   TAsciiz Annotation,
   TAddress Address
@@ -33,6 +39,9 @@ void me_DebugPrints::Print(
   Console.Print(Address);
 }
 
+/*
+  Print boolean
+*/
 void me_DebugPrints::Print(
   TAsciiz Annotation,
   TBool Bool
@@ -42,6 +51,9 @@ void me_DebugPrints::Print(
   Console.Print(Bool);
 }
 
+/*
+  Print address segment span
+*/
 void me_DebugPrints::PrintAddrseg(
   TAsciiz Annotation,
   TAddressSegment AddrSeg
@@ -54,6 +66,9 @@ void me_DebugPrints::PrintAddrseg(
   Console.Write(")");
 }
 
+/*
+  Print work memory segment span and data
+*/
 void me_DebugPrints::PrintMemseg(
   TAsciiz Annotation,
   TAddressSegment MemSeg
@@ -74,6 +89,9 @@ void me_DebugPrints::PrintMemseg(
   Console.Write(")");
 }
 
+/*
+  Print iterator state
+*/
 void me_DebugPrints::PrintIterator(
   TAsciiz Annotation,
   TAddrsegIterator Rator
