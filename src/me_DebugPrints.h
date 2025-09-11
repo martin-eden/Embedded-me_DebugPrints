@@ -18,12 +18,13 @@ namespace me_DebugPrints
   void Print(TAsciiz Annotation, TBool Bool);
   // Print address segment span
   void PrintAddrseg(TAsciiz Annotation, TAddressSegment AddrSeg);
-  // Print memory segment span and data
-  void PrintMemseg(TAsciiz Annotation, TAddressSegment MemSeg);
+  // Print memory segment data
+  void PrintMemsegData(TAsciiz Annotation, TAddressSegment MemSeg);
   // Print iterator state
   void PrintIterator(TAsciiz Annotation, TAddrsegIterator Rator);
 }
 
 /*
   2025-09-04
+  2025-09-11
 */

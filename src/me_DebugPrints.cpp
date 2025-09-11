@@ -64,12 +64,13 @@ void me_DebugPrints::PrintAddrseg(
   Print("Addr", AddrSeg.Addr);
   Print("Size", AddrSeg.Size);
   Console.Write(")");
+  Console.EndLine();
 }
 
 /*
-  Print work memory segment span and data
+  Print work memory segment data
 */
-void me_DebugPrints::PrintMemseg(
+void me_DebugPrints::PrintMemsegData(
   TAsciiz Annotation,
   TAddressSegment MemSeg
 )
@@ -77,16 +78,13 @@ void me_DebugPrints::PrintMemseg(
   me_StreamsCollection::TWorkmemInputStream MemStream;
   TUnit Unit;
 
-  PrintAddrseg(Annotation, MemSeg);
-  Console.Write(" ");
-  Console.Write("Data");
-  Console.Write(" (");
-
   MemStream.Init(MemSeg);
+  Console.Write(Annotation);
+  Console.Write(" (");
   while (MemStream.Read(&Unit))
     Console.Print(Unit);
-
   Console.Write(")");
+  Console.EndLine();
 }
 
 /*
@@ -102,8 +100,11 @@ void me_DebugPrints::PrintIterator(
   Print("Addr", Rator.GetAddr());
   Print("IsDone", Rator.IsDone());
   Console.Write(")");
+
+  Console.EndLine();
 }
 
 /*
   2025-09-04
+  2025-09-11
 */
