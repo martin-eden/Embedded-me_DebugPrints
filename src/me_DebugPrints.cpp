@@ -2,13 +2,14 @@
 
 /*
   Author: Martin Eden
-  Last mod.: 2025-09-11
+  Last mod.: 2025-09-12
 */
 
 #include <me_DebugPrints.h>
 
 #include <me_BaseTypes.h>
 #include <me_BaseInterfaces.h>
+#include <me_Timestamp.h>
 
 #include <me_Console.h>
 #include <me_StreamsCollection.h>
@@ -105,6 +106,44 @@ void me_DebugPrints::PrintIterator(
 }
 
 /*
+  Print time duration
+*/
+void me_DebugPrints::PrintDuration(
+  me_Timestamp::TTimestamp Duration
+)
+{
+  TBool IsStarted;
+
+  Console.Write("(");
+
+  IsStarted = false;
+
+  if (Duration.KiloS != 0)
+    IsStarted = true;
+  if (IsStarted)
+    Console.Print(Duration.KiloS);
+
+  if (Duration.S != 0)
+    IsStarted = true;
+  if (IsStarted)
+    Console.Print(Duration.S);
+
+  if (Duration.MilliS != 0)
+    IsStarted = true;
+  if (IsStarted)
+    Console.Print(Duration.MilliS);
+
+  if (Duration.MicroS != 0)
+    IsStarted = true;
+  if (IsStarted)
+    Console.Print(Duration.MicroS);
+
+  Console.Write(")");
+  Console.EndLine();
+}
+
+/*
   2025-09-04
   2025-09-11
+  2025-09-12
 */

@@ -2,12 +2,15 @@
 
 /*
   Author: Martin Eden
-  Last mod.: 2025-09-04
+  Last mod.: 2025-09-12
 */
 
 #include <me_DebugPrints.h>
 
 #include <me_BaseTypes.h>
+#include <me_BaseInterfaces.h>
+#include <me_Timestamp.h>
+
 #include <me_Console.h>
 #include <me_WorkmemTools.h>
 
@@ -37,19 +40,19 @@ void TestAddrsegPrint()
 
   AddrSeg = { .Addr = 100, .Size = 3 };
 
-  PrintAddrseg("AddrSeg", AddrSeg);
+  PrintAddrseg("Address segment", AddrSeg);
   Console.EndLine();
 }
 
 void TestMemsegPrint()
 {
-  using me_DebugPrints::PrintMemseg;
+  using me_DebugPrints::PrintMemsegData;
 
   TAddressSegment MemSeg;
 
   MemSeg = me_WorkmemTools::FromAsciiz("DATA");
 
-  PrintMemseg("MemSeg", MemSeg);
+  PrintMemsegData("Memory data", MemSeg);
   Console.EndLine();
 }
 
@@ -71,12 +74,25 @@ void TestIteratorPrint()
   PrintIterator("Iterator", Rator);
 }
 
+void TestDurationPrint()
+{
+  using me_DebugPrints::PrintDuration;
+
+  me_Timestamp::TTimestamp Duration;
+
+  Duration = { .KiloS = 0, .S = 0, .MilliS = 15, .MicroS = 712 };
+
+  Console.Write("Duration");
+  PrintDuration(Duration);
+}
+
 void RunTests()
 {
   TestPrints();
   TestAddrsegPrint();
   TestMemsegPrint();
   TestIteratorPrint();
+  TestDurationPrint();
 }
 
 void setup()
@@ -96,4 +112,5 @@ void loop()
 
 /*
   2025-09-04
+  2025-09-12
 */

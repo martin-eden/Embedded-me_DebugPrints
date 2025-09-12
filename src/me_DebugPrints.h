@@ -2,11 +2,12 @@
 
 /*
   Author: Martin Eden
-  Last mod.: 2025-09-11
+  Last mod.: 2025-09-12
 */
 
 #include <me_BaseTypes.h>
 #include <me_BaseInterfaces.h>
+#include <me_Timestamp.h>
 
 namespace me_DebugPrints
 {
@@ -22,9 +23,12 @@ namespace me_DebugPrints
   void PrintMemsegData(TAsciiz Annotation, TAddressSegment MemSeg);
   // Print iterator state
   void PrintIterator(TAsciiz Annotation, TAddrsegIterator Rator);
+  // Print duration
+  void PrintDuration(me_Timestamp::TTimestamp Duration);
 }
 
 /*
   2025-09-04
   2025-09-11
+  2025-09-12
 */
