@@ -2,7 +2,7 @@
 
 /*
   Author: Martin Eden
-  Last mod.: 2025-09-12
+  Last mod.: 2025-09-14
 */
 
 #include <me_DebugPrints.h>
@@ -114,7 +114,7 @@ void me_DebugPrints::PrintDuration(
 {
   TBool IsStarted;
 
-  Console.Write("(");
+  Console.Write(" (");
 
   IsStarted = false;
 
@@ -139,11 +139,11 @@ void me_DebugPrints::PrintDuration(
     Console.Print(Duration.MicroS);
 
   Console.Write(")");
-  Console.EndLine();
 }
 
 /*
   2025-09-04
   2025-09-11
   2025-09-12
+  2025-09-14
 */

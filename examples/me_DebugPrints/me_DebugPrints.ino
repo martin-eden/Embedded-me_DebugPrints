@@ -2,7 +2,7 @@
 
 /*
   Author: Martin Eden
-  Last mod.: 2025-09-12
+  Last mod.: 2025-09-14
 */
 
 #include <me_DebugPrints.h>
@@ -84,6 +84,7 @@ void TestDurationPrint()
 
   Console.Write("Duration");
   PrintDuration(Duration);
+  Console.EndLine();
 }
 
 void RunTests()
