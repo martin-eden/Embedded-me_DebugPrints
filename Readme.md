@@ -2,12 +2,12 @@
 
 (2025-09)
 
-Prints data of commonly used types and structures.
+Prints data of commonly used types and structures with annotations.
 
 Used for data output in tests.
 
 Do not use it as base for serialization. Here is no solid enough
-contract: output decorations can change.
+contract: output representation can change.
 
 
 ## Code
