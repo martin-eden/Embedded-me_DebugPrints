@@ -2,7 +2,7 @@
 
 /*
   Author: Martin Eden
-  Last mod.: 2025-09-14
+  Last mod.: 2025-09-19
 */
 
 #include <me_DebugPrints.h>
@@ -61,7 +61,7 @@ void me_DebugPrints::PrintAddrseg(
 )
 {
   Console.Write(Annotation);
-  Console.Write(" ( ");
+  Console.Write("(");
   Print("Addr", AddrSeg.Addr);
   Print("Size", AddrSeg.Size);
   Console.Write(")");
@@ -81,7 +81,7 @@ void me_DebugPrints::PrintMemsegData(
 
   MemStream.Init(MemSeg);
   Console.Write(Annotation);
-  Console.Write(" (");
+  Console.Write("(");
   while (MemStream.Read(&Unit))
     Console.Print(Unit);
   Console.Write(")");
@@ -97,7 +97,7 @@ void me_DebugPrints::PrintIterator(
 )
 {
   Console.Write(Annotation);
-  Console.Write(" ( ");
+  Console.Write("(");
   Print("Addr", Rator.GetAddr());
   Print("IsDone", Rator.IsDone());
   Console.Write(")");
@@ -114,7 +114,7 @@ void me_DebugPrints::PrintDuration(
 {
   TBool IsStarted;
 
-  Console.Write(" (");
+  Console.Write("(");
 
   IsStarted = false;
 
@@ -146,4 +146,5 @@ void me_DebugPrints::PrintDuration(
   2025-09-11
   2025-09-12
   2025-09-14
+  2025-09-19
 */
