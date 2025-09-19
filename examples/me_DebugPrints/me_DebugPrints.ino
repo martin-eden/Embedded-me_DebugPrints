@@ -2,7 +2,7 @@
 
 /*
   Author: Martin Eden
-  Last mod.: 2025-09-14
+  Last mod.: 2025-09-19
 */
 
 #include <me_DebugPrints.h>
@@ -101,9 +101,11 @@ void setup()
   Console.Init();
 
   Console.Print("( [me_DebugPrints] test");
+  Console.Indent();
 
   RunTests();
 
+  Console.Unindent();
   Console.Print(") Done");
 }
 
