@@ -2,14 +2,14 @@
 
 /*
   Author: Martin Eden
-  Last mod.: 2025-09-19
+  Last mod.: 2025-09-20
 */
 
 #include <me_DebugPrints.h>
 
 #include <me_BaseTypes.h>
 #include <me_BaseInterfaces.h>
-#include <me_Timestamp.h>
+#include <me_Duration.h>
 
 #include <me_Console.h>
 #include <me_WorkmemTools.h>
@@ -78,7 +78,7 @@ void TestDurationPrint()
 {
   using me_DebugPrints::PrintDuration;
 
-  me_Timestamp::TTimestamp Duration;
+  me_Duration::TDuration Duration;
 
   Duration = { .KiloS = 0, .S = 0, .MilliS = 15, .MicroS = 712 };
 

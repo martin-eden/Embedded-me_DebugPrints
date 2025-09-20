@@ -2,12 +2,12 @@
 
 /*
   Author: Martin Eden
-  Last mod.: 2025-09-12
+  Last mod.: 2025-09-20
 */
 
 #include <me_BaseTypes.h>
 #include <me_BaseInterfaces.h>
-#include <me_Timestamp.h>
+#include <me_Duration.h>
 
 namespace me_DebugPrints
 {
@@ -24,7 +24,7 @@ namespace me_DebugPrints
   // Print iterator state
   void PrintIterator(TAsciiz Annotation, TAddrsegIterator Rator);
   // Print duration
-  void PrintDuration(me_Timestamp::TTimestamp Duration);
+  void PrintDuration(me_Duration::TDuration Duration);
 }
 
 /*
