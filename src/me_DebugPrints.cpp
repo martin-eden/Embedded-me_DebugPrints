@@ -2,7 +2,7 @@
 
 /*
   Author: Martin Eden
-  Last mod.: 2025-09-20
+  Last mod.: 2025-10-18
 */
 
 #include <me_DebugPrints.h>
@@ -15,6 +15,18 @@
 #include <me_StreamsCollection.h>
 
 using namespace me_DebugPrints;
+
+/*
+  Print boolean
+*/
+void me_DebugPrints::Print(
+  TAsciiz Annotation,
+  TBool Bool
+)
+{
+  Console.Write(Annotation);
+  Console.Print(Bool);
+}
 
 /*
   Print unit
@@ -41,15 +53,15 @@ void me_DebugPrints::Print(
 }
 
 /*
-  Print boolean
+  Print uint_4
 */
 void me_DebugPrints::Print(
   TAsciiz Annotation,
-  TBool Bool
+  TUint_4 Uint_4
 )
 {
   Console.Write(Annotation);
-  Console.Print(Bool);
+  Console.Print(Uint_4);
 }
 
 /*

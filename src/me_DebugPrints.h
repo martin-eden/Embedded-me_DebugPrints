@@ -2,7 +2,7 @@
 
 /*
   Author: Martin Eden
-  Last mod.: 2025-09-20
+  Last mod.: 2025-10-18
 */
 
 #include <me_BaseTypes.h>
@@ -11,12 +11,14 @@
 
 namespace me_DebugPrints
 {
+  // Print boolean
+  void Print(TAsciiz Annotation, TBool Bool);
   // Print unit
   void Print(TAsciiz Annotation, TUnit Unit);
   // Print address
   void Print(TAsciiz Annotation, TAddress Address);
-  // Print boolean
-  void Print(TAsciiz Annotation, TBool Bool);
+  // Print uint_4
+  void Print(TAsciiz Annotation, TUint_4 Uint_4);
   // Print address segment span
   void PrintAddrseg(TAsciiz Annotation, TAddressSegment AddrSeg);
   // Print memory segment data
@@ -31,4 +33,5 @@ namespace me_DebugPrints
   2025-09-04
   2025-09-11
   2025-09-12
+  2025-10-18
 */
