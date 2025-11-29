@@ -2,7 +2,7 @@
 
 /*
   Author: Martin Eden
-  Last mod.: 2025-10-18
+  Last mod.: 2025-11-29
 */
 
 #include <me_DebugPrints.h>
@@ -154,9 +154,23 @@ void me_DebugPrints::PrintDuration(
 }
 
 /*
+  Print message and halt
+*/
+void me_DebugPrints::Panic(
+  TAsciiz Epitaph
+)
+{
+  Console.EndLine();
+  Console.Print(Epitaph);
+  Console.Print("∎");
+  while (true) ;
+}
+
+/*
   2025-09-04
   2025-09-11
   2025-09-12
   2025-09-14
   2025-09-19
+  2025-11-29
 */
