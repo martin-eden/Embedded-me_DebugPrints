@@ -2,7 +2,7 @@
 
 /*
   Author: Martin Eden
-  Last mod.: 2025-11-29
+  Last mod.: 2025-12-26
 */
 
 #include <me_DebugPrints.h>
@@ -124,32 +124,12 @@ void me_DebugPrints::PrintDuration(
   me_Duration::TDuration Duration
 )
 {
-  TBool IsStarted;
+  IOutputStream * OutStream;
+
+  OutStream = Console.GetOutputStream();
 
   Console.Write("(");
-
-  IsStarted = false;
-
-  if (Duration.KiloS != 0)
-    IsStarted = true;
-  if (IsStarted)
-    Console.Print(Duration.KiloS);
-
-  if (Duration.S != 0)
-    IsStarted = true;
-  if (IsStarted)
-    Console.Print(Duration.S);
-
-  if (Duration.MilliS != 0)
-    IsStarted = true;
-  if (IsStarted)
-    Console.Print(Duration.MilliS);
-
-  if (Duration.MicroS != 0)
-    IsStarted = true;
-  if (IsStarted)
-    Console.Print(Duration.MicroS);
-
+  me_Duration::Write(Duration, OutStream);
   Console.Write(")");
 }
 
