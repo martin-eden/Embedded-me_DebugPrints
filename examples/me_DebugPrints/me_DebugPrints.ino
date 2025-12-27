@@ -82,8 +82,7 @@ void TestDurationPrint()
 
   Duration = { .KiloS = 0, .S = 0, .MilliS = 15, .MicroS = 712 };
 
-  Console.Write("Duration");
-  PrintDuration(Duration);
+  PrintDuration("Duration", Duration);
   Console.EndLine();
 }
 

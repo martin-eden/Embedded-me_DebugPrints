@@ -2,7 +2,7 @@
 
 /*
   Author: Martin Eden
-  Last mod.: 2025-12-26
+  Last mod.: 2025-12-27
 */
 
 #include <me_DebugPrints.h>
@@ -121,15 +121,13 @@ void me_DebugPrints::PrintIterator(
   Print time duration
 */
 void me_DebugPrints::PrintDuration(
+  TAsciiz Annotation,
   me_Duration::TDuration Duration
 )
 {
-  IOutputStream * OutStream;
-
-  OutStream = Console.GetOutputStream();
-
+  Console.Write(Annotation);
   Console.Write("(");
-  me_Duration::Write(Duration, OutStream);
+  me_Duration::Write(Duration, Console.GetOutputStream());
   Console.Write(")");
 }
 
