@@ -2,12 +2,11 @@
 
 /*
   Author: Martin Eden
-  Last mod.: 2025-12-27
+  Last mod.: 2025-12-28
 */
 
 #include <me_BaseTypes.h>
 #include <me_BaseInterfaces.h>
-#include <me_Duration.h>
 
 namespace me_DebugPrints
 {
@@ -26,7 +25,7 @@ namespace me_DebugPrints
   // Print iterator state
   void PrintIterator(TAsciiz Annotation, TAddrsegIterator Rator);
   // Print duration
-  void PrintDuration(TAsciiz Annotation, me_Duration::TDuration Duration);
+  void PrintDuration_Us(TAsciiz Annotation, TUint_4 Duration_Us);
   // Epitaph. Print message and went to infinite loop
   void Panic(TAsciiz);
 }
@@ -38,4 +37,5 @@ namespace me_DebugPrints
   2025-10-18
   2025-11-29 Panic/Epitaph
   2025-12-27
+  2025-12-28
 */

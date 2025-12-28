@@ -2,14 +2,13 @@
 
 /*
   Author: Martin Eden
-  Last mod.: 2025-09-20
+  Last mod.: 2025-12-28
 */
 
 #include <me_DebugPrints.h>
 
 #include <me_BaseTypes.h>
 #include <me_BaseInterfaces.h>
-#include <me_Duration.h>
 
 #include <me_Console.h>
 #include <me_WorkmemTools.h>
@@ -76,13 +75,11 @@ void TestIteratorPrint()
 
 void TestDurationPrint()
 {
-  using me_DebugPrints::PrintDuration;
+  TUint_4 Duration_Us;
 
-  me_Duration::TDuration Duration;
+  Duration_Us = 15712;
 
-  Duration = { .KiloS = 0, .S = 0, .MilliS = 15, .MicroS = 712 };
-
-  PrintDuration("Duration", Duration);
+  me_DebugPrints::PrintDuration_Us("Duration (us)", Duration_Us);
   Console.EndLine();
 }
 

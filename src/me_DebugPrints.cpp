@@ -118,16 +118,23 @@ void me_DebugPrints::PrintIterator(
 }
 
 /*
-  Print time duration
+  Print time duration given in microseconds
 */
-void me_DebugPrints::PrintDuration(
+void me_DebugPrints::PrintDuration_Us(
   TAsciiz Annotation,
-  me_Duration::TDuration Duration
+  TUint_4 Duration_Us
 )
 {
+  me_Duration::TDuration Duration;
+
   Console.Write(Annotation);
   Console.Write("(");
-  me_Duration::Write(Duration, Console.GetOutputStream());
+
+  if (!me_Duration::DurationFromMicros(&Duration, Duration_Us))
+    Console.Write("Failed to convert to duration");
+  else
+    me_Duration::Write(Duration, Console.GetOutputStream());
+
   Console.Write(")");
 }
 
